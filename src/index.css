@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-serif: "Lora", serif;
+
+  --color-oro: #D4AF37;
+  --color-beige: #F5F2ED;
+  --color-naranja: #E65100;
+  --color-marron: #3E2723;
+  --color-crema: #FFFDF9;
+}
+
+@layer base {
+  body {
+    @apply bg-crema text-marron font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-bold tracking-tight;
+  }
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+.texto-editorial {
+  @apply font-serif text-lg leading-loose;
+}
+
+.capitular::first-letter {
+  @apply float-left text-7xl font-display font-bold pr-4 pt-2 text-oro;
+}
+
+.gradiente-premium {
+  background: linear-gradient(135deg, #3E2723 0%, #5D4037 100%);
+}
+
+.borde-elegante {
+  border: 1px solid rgba(62, 39, 35, 0.1);
+}
